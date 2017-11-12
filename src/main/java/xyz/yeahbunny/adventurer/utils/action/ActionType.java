@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ActionType {
     INVALID("invalid"),
+    REQUEST_PLAYER("request_player_state"),
+    RESPONSE_PLAYER("show_player_state"),
+    REQUEST_MY_PLAYER("request_my_player"),
+    RESPONSE_MY_PLAYER("show_my_player"),
     PLAYER_MOVED("player_moved"),
     SHOW_PLAYER("show_player_moved");
 
