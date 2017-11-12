@@ -18,12 +18,12 @@ public abstract class Parser<OUTPUT> {
             return parse(json);
         } catch (IOException e) {
             e.printStackTrace();
-            LOG.error("invalid action: " + jsonString);
-            return buildInvalidAction(jsonString);
+            LOG.error("invalid object to parse: " + jsonString);
+            return buildInvalid(jsonString);
         }
     }
 
     public abstract OUTPUT parse(JsonNode jsonNode);
 
-    protected abstract OUTPUT buildInvalidAction(String receivedAction);
+    protected abstract OUTPUT buildInvalid(String data);
 }
