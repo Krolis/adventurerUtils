@@ -12,7 +12,7 @@ public abstract class Parser<OUTPUT> {
     private static final Logger LOG = LoggerFactory.getLogger(Parser.class);
     private ObjectMapper mapper = new ObjectMapper();
 
-    public OUTPUT parse(String jsonString){
+    public OUTPUT parse(String jsonString) {
         try {
             JsonNode json = mapper.readTree(jsonString);
             return parse(json);
@@ -25,5 +25,5 @@ public abstract class Parser<OUTPUT> {
 
     public abstract OUTPUT parse(JsonNode jsonNode);
 
-    protected abstract OUTPUT buildInvalid(String data);
+    protected abstract OUTPUT buildInvalid(Object data);
 }
