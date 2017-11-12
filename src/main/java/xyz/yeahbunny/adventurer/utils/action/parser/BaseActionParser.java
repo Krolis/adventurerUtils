@@ -10,7 +10,7 @@ public class BaseActionParser extends Parser<Action<JsonNode>> {
 
     private static final JsonPointer typeJsonPointer = JsonPointer.valueOf("/type");
     private static final JsonPointer userIdJsonPointer = JsonPointer.valueOf("/userId");
-    private static final JsonPointer dataJsonPointer = JsonPointer.valueOf("/dataId");
+    private static final JsonPointer dataJsonPointer = JsonPointer.valueOf("/data");
 
     @Override
     public Action<JsonNode> parse(JsonNode json) {
