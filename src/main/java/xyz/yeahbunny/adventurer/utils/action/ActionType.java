@@ -1,4 +1,4 @@
-package action;
+package xyz.yeahbunny.adventurer.utils.action;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

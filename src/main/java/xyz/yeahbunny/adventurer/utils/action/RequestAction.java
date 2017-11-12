@@ -1,4 +1,4 @@
-package action;
+package xyz.yeahbunny.adventurer.utils.action;
 
 public class RequestAction<DATA> extends Action<DATA> {
 
