@@ -10,7 +10,8 @@ public enum ActionType {
     RESPONSE_MY_PLAYER("show_my_player"),
     PLAYER_MOVED("player_moved"),
     SHOW_PLAYER("show_player_moved"),
-    SHOW_NPC("show_npc");
+    SHOW_NPC("show_npc"),
+    ATTACK_AREA("attack_area");
 
     private final String name;
 
