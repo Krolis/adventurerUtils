@@ -19,7 +19,9 @@ public class BaseActionParser extends Parser<Action<JsonNode>> {
             case REQUEST_PLAYER:
             case REQUEST_MY_PLAYER:
             case PLAYER_MOVED:
+            case ATTACK_AREA:
                 return parseBaseRequestAction(actionType, json);
+            case SHOW_NPC:
             case SHOW_PLAYER:
             case RESPONSE_PLAYER:
             case RESPONSE_MY_PLAYER:
