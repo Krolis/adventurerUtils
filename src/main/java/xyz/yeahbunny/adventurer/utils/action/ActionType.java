@@ -11,7 +11,8 @@ public enum ActionType {
     PLAYER_MOVED("player_moved"),
     SHOW_PLAYER("show_player_moved"),
     SHOW_NPC("show_npc"),
-    ATTACK_AREA("attack_area");
+    ATTACK_AREA("attack_area"),
+    ATTACK_PLAYERS("attack_players");
 
     private final String name;
 
