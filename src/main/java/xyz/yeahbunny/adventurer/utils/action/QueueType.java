@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum QueueType {
     INVALID("invalid"),
     API("apiQueue"),
+    DISPATCHER("dispatcherQueue"),
     CHARACTER_QUEUE("characterQueue"),
     POSITION_QUEUE("positionQueue");
 
