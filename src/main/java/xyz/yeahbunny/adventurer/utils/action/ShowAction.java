@@ -6,17 +6,17 @@ import java.util.Set;
 
 public class ShowAction<DATA> extends Action<DATA> {
 
-    private Set<String> usersToNotify;
+    private Set<String> charactersToNotify;
 
-    public Set<String> getUsersToNotify() {
-        return usersToNotify;
+    public Set<String> getCharactersToNotify() {
+        return charactersToNotify;
     }
 
-    public void setUsersToNotify(Set<String> usersToNotify) {
-        this.usersToNotify = usersToNotify;
+    public void setCharactersToNotify(Set<String> charactersToNotify) {
+        this.charactersToNotify = charactersToNotify;
     }
 
-    public void setUsersToNotify(String ...usersToNotify) {
-        this.usersToNotify = new HashSet<>(Arrays.asList(usersToNotify));
+    public void setUsersToNotify(String... usersToNotify) {
+        this.charactersToNotify = new HashSet<>(Arrays.asList(usersToNotify));
     }
 }

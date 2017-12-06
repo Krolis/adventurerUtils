@@ -9,23 +9,23 @@ import xyz.yeahbunny.adventurer.utils.action.RequestAction;
 public class BaseActionParser extends Parser<Action<JsonNode>> {
 
     private static final JsonPointer typeJsonPointer = JsonPointer.valueOf("/type");
-    private static final JsonPointer userIdJsonPointer = JsonPointer.valueOf("/userId");
+    private static final JsonPointer characterIdJsonPointer = JsonPointer.valueOf("/characterId");
     private static final JsonPointer dataJsonPointer = JsonPointer.valueOf("/data");
 
     @Override
     public Action<JsonNode> parse(JsonNode json) {
         ActionType actionType = extractType(json);
         switch (actionType) {
-            case REQUEST_PLAYER:
-            case REQUEST_MY_PLAYER:
-            case PLAYER_MOVED:
+            case REQUEST_CHARACTER:
+            case REQUEST_MY_CHARACTER:
+            case CHARACTER_MOVED:
             case ATTACK_AREA:
-            case ATTACK_PLAYERS:
+            case ATTACK_CHARACTERS:
                 return parseBaseRequestAction(actionType, json);
             case SHOW_NPC:
-            case SHOW_PLAYER:
-            case RESPONSE_PLAYER:
-            case RESPONSE_MY_PLAYER:
+            case SHOW_CHARACTER:
+            case RESPONSE_CHARACTER:
+            case RESPONSE_MY_CHARACTER:
             case INVALID:
             default:
                 return buildInvalid(json);
@@ -39,7 +39,7 @@ public class BaseActionParser extends Parser<Action<JsonNode>> {
     private RequestAction<JsonNode> parseBaseRequestAction(ActionType actionType, JsonNode json) {
         RequestAction<JsonNode> action = new RequestAction();
         action.setType(actionType);
-        action.setUserId(json.at(userIdJsonPointer).textValue());
+        action.setCharacterId(json.at(characterIdJsonPointer).textValue());
         action.setData(json.at(dataJsonPointer));
         return action;
     }

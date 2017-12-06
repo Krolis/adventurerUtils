@@ -2,14 +2,14 @@ package xyz.yeahbunny.adventurer.utils.action;
 
 public class RequestAction<DATA> extends Action<DATA> {
 
-    private String userId;
+    private String characterId;
 
-    public String getUserId() {
-        return userId;
+    public String getCharacterId() {
+        return characterId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
     }
 
 }

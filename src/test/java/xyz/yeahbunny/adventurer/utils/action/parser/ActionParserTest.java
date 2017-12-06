@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import xyz.yeahbunny.adventurer.utils.action.Action;
 import xyz.yeahbunny.adventurer.utils.action.ActionType;
 import xyz.yeahbunny.adventurer.utils.action.RequestAction;
-import xyz.yeahbunny.adventurer.utils.action.parser.BaseActionParser;
 
 @RunWith(JUnitParamsRunner.class)
 public class ActionParserTest {
@@ -43,9 +42,9 @@ public class ActionParserTest {
     @Test
     @Parameters({
             "Action,{\"type\":\"badactionaname\"}",
-            "RequestAction,{\"type\":\"request_my_player\"}",
-            "RequestAction,{\"type\":\"request_player_state\"}",
-            "RequestAction,{\"type\":\"player_moved\"}"
+            "RequestAction,{\"type\":\"request_my_character\"}",
+            "RequestAction,{\"type\":\"request_character\"}",
+            "RequestAction,{\"type\":\"character_moved\"}"
     })
     public void shouldParseCorrectActionData(String expectedActionDataType, String actionToParse) {
 
@@ -56,9 +55,9 @@ public class ActionParserTest {
 
     @Test
     public void shouldParseUserId(){
-        String actionToParse = "{\"type\":\"player_moved\",\"userId\":\"UID\"}";
+        String actionToParse = "{\"type\":\"character_moved\",\"characterId\":\"UID\"}";
         RequestAction action = (RequestAction)baseActionParser.parse(actionToParse);
 
-        Assert.assertEquals("UID", action.getUserId());
+        Assert.assertEquals("UID", action.getCharacterId());
     }
 }

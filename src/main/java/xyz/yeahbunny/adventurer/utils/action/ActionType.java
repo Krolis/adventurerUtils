@@ -4,15 +4,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ActionType {
     INVALID("invalid"),
-    REQUEST_PLAYER("request_player_state"),
-    RESPONSE_PLAYER("show_player_state"),
-    REQUEST_MY_PLAYER("request_my_player"),
-    RESPONSE_MY_PLAYER("show_my_player"),
-    PLAYER_MOVED("player_moved"),
-    SHOW_PLAYER("show_player_moved"),
+    REQUEST_CHARACTER("request_character"),
+    RESPONSE_CHARACTER("show_character"),
+    REQUEST_MY_CHARACTER("request_my_character"),
+    RESPONSE_MY_CHARACTER("show_my_character"),
+    CHARACTER_MOVED("character_moved"),
+    SHOW_CHARACTER("show_character"),
     SHOW_NPC("show_npc"),
     ATTACK_AREA("attack_area"),
-    ATTACK_PLAYERS("attack_players");
+    ATTACK_CHARACTERS("attack_characters");
 
     private final String name;
 
@@ -20,9 +20,9 @@ public enum ActionType {
         name = s;
     }
 
-    public static ActionType byName(String name){
-        for(ActionType actionType: values()){
-            if(actionType.name.equals(name)){
+    public static ActionType byName(String name) {
+        for (ActionType actionType : values()) {
+            if (actionType.name.equals(name)) {
                 return actionType;
             }
         }
