@@ -16,7 +16,7 @@ public class ShowAction<DATA> extends Action<DATA> {
         this.charactersToNotify = charactersToNotify;
     }
 
-    public void setUsersToNotify(String... usersToNotify) {
-        this.charactersToNotify = new HashSet<>(Arrays.asList(usersToNotify));
+    public void setCharactersToNotify(String... charactersToNotify) {
+        this.charactersToNotify = new HashSet<>(Arrays.asList(charactersToNotify));
     }
 }
