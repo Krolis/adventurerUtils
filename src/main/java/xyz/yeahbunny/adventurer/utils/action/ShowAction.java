@@ -12,11 +12,11 @@ public class ShowAction<DATA> extends Action<DATA> {
         return charactersToNotify;
     }
 
-    public void setCharactersToNotify(Set<String> charactersToNotify) {
-        this.charactersToNotify = charactersToNotify;
-    }
-
     public void setCharactersToNotify(String... charactersToNotify) {
         this.charactersToNotify = new HashSet<>(Arrays.asList(charactersToNotify));
+    }
+
+    public void setCharactersToNotify(Set<String> charactersToNotify) {
+        this.charactersToNotify = charactersToNotify;
     }
 }
