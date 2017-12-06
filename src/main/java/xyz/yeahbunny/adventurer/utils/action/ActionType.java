@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum ActionType {
     INVALID("invalid"),
     REQUEST_CHARACTER("request_character"),
-    RESPONSE_CHARACTER("show_character"),
+    RESPONSE_CHARACTER("response_character"),
     REQUEST_MY_CHARACTER("request_my_character"),
-    RESPONSE_MY_CHARACTER("show_my_character"),
+    RESPONSE_MY_CHARACTER("response_my_character"),
     CHARACTER_MOVED("character_moved"),
     SHOW_CHARACTER("show_character"),
     SHOW_NPC("show_npc"),
