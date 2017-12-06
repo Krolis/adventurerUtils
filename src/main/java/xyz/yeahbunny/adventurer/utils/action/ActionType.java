@@ -9,7 +9,7 @@ public enum ActionType {
     REQUEST_MY_CHARACTER("request_my_character"),
     RESPONSE_MY_CHARACTER("response_my_character"),
     CHARACTER_MOVED("character_moved"),
-    SHOW_CHARACTER("show_character"),
+    SHOW_CHARACTER("show_characters"),
     SHOW_NPC("show_npc"),
     ATTACK_AREA("attack_area"),
     ATTACK_CHARACTERS("attack_characters");
